@@ -36,7 +36,7 @@ const checkoutPayment = asyncHandler(async (req, res) => {
     });
   }
   //Use function
-  request(payment[0].totalPrice, 'خرید از علی لند', function (data) {
+  request(payment[0].totalPrice, 'خرید از فروشگاه', function (data) {
     if (data.status) {
       res.writeHead(302, { 'Location': data.url });
       res.end();
